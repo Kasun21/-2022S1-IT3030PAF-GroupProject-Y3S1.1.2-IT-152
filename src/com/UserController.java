@@ -23,6 +23,7 @@ public class UserController {
 	User_Model users =new User_Model();
 	
 	@POST
+	@Path("/AddUser")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.TEXT_PLAIN)
 	public String add(String json_data)
@@ -45,12 +46,11 @@ public class UserController {
 			
 			return output.toString();
 			
-		}
-			
-		
+		}	
 	}
 	
 	@PUT
+	@Path("/UpdateUser")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.TEXT_PLAIN)
 	public String edit(String json_data)
@@ -78,6 +78,7 @@ public class UserController {
 	}
 	
 	@DELETE
+	@Path("/DeleteUser")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.TEXT_PLAIN)
 	public String delete(String json_data)
@@ -104,6 +105,7 @@ public class UserController {
 	}
 
 	@GET
+	@Path("/ViewUser")
 	@Produces(MediaType.TEXT_HTML)
 	public String view(String json_data)
 	{

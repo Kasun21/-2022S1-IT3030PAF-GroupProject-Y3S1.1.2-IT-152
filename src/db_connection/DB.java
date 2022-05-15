@@ -9,8 +9,8 @@ public class DB {
 	public static Connection getConn() throws ClassNotFoundException, SQLException {
 
 		if (db == null || db.isClosed()) {
-			Class.forName("com.mysql.jdbc.Driver");
-			db = DriverManager.getConnection("jdbc:mysql://localhost:3306/Electro_Grid_System", "root", "");
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			db = DriverManager.getConnection("jdbc:mysql://localhost:3306/electro_grid_system", "root", "");
 		}
 		
 		return db;
