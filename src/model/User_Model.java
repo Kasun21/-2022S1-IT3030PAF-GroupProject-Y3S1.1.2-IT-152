@@ -8,12 +8,9 @@ import java.sql.SQLException;
 
 public class User_Model {
 
+
 	private String res;
-	
-	public String getRes() {
-		return res;
-	}
-	
+
 	public void setRes(String res) {
 		this.res = res;
 	}
@@ -143,6 +140,17 @@ public class User_Model {
 			System.err.println(e.getMessage());
 			setRes("Error");
 		}
+	}
+
+	public String InsertUserDetails(String name, String address, int accNo, String nic, String email, String phone,
+			String type, String uname, String pass) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public String singleUserDetails(int uid) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 }
